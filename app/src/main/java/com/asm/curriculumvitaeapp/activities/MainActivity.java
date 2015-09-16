@@ -21,11 +21,15 @@ public class MainActivity extends Activity {
     private final String TAG = MainActivity.class.getCanonicalName();
     private ImageView ic_action_call, ic_action_email;
     private Button buttonPersonalInfo, buttonExperience, buttonEducation;
+    private Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mContext = this;
+        new CurriculumVitaeAppUtils(this);
 
         ic_action_call = (ImageView)findViewById(R.id.ic_action_call);
         ic_action_email = (ImageView)findViewById(R.id.ic_action_email);
@@ -54,97 +58,34 @@ public class MainActivity extends Activity {
         ic_action_call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                askUserToCall();
+                CurriculumVitaeAppUtils.askUserToCall();
             }
         });
         ic_action_email.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                askUserToSendEmail();
+                CurriculumVitaeAppUtils.askUserToSendEmail();
             }
         });
     }
 
     @Override
     public void onBackPressed(){
-        askUserToExit();
+        CurriculumVitaeAppUtils.askUserToExit();
     }
 
     private void startEducationActivity() {
-        Intent intent = new Intent(CurriculumVitaeApp.getContext(), EducationActivity.class);
+        Intent intent = new Intent(mContext, EducationActivity.class);
         startActivity(intent);
     }
 
     private void startExperienceActivity() {
-        Intent intent = new Intent(CurriculumVitaeApp.getContext(), ExperienceActivity.class);
+        Intent intent = new Intent(mContext, ExperienceActivity.class);
         startActivity(intent);
     }
 
     private void startPersonalInformationActivity() {
-        Intent intent = new Intent(CurriculumVitaeApp.getContext(), PersonalInformationActivity.class);
+        Intent intent = new Intent(mContext, PersonalInformationActivity.class);
         startActivity(intent);
     }
-
-    private void askUserToExit(){
-        AlertDialog dialog = CurriculumVitaeAppUtils.alertDialog(this, true, getString(R.string.question_exit), "", getString(R.string.exit), getString(R.string.cancel),
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        goToHomePage();
-                    }
-                }, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
-        dialog.show();
-    }
-
-    private void goToHomePage() {
-        Intent startMain = new Intent(Intent.ACTION_MAIN);
-        startMain.addCategory(Intent.CATEGORY_HOME);
-        startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        startActivity(startMain);
-        finish();
-    }
-
-    private void askUserToCall(){
-        AlertDialog dialog = CurriculumVitaeAppUtils.alertDialog(this, true, getString(R.string.question_call), "", getString(R.string.yes), getString(R.string.cancel),
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        callMe();
-                    }
-                }, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
-        dialog.show();
-    }
-
-    private void askUserToSendEmail(){
-        AlertDialog dialog = CurriculumVitaeAppUtils.alertDialog(this, true, getString(R.string.question_send_email), "", getString(R.string.yes), getString(R.string.cancel),
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        CurriculumVitaeAppUtils.showAlertDialogForContactDetails(CurriculumVitaeApp.getContext());
-                    }
-                }, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
-        dialog.show();
-    }
-
-    private void callMe(){
-        Intent intent = new Intent(Intent.ACTION_CALL);
-        intent.setData(Uri.parse("tel:0034670998593"));
-        startActivity(intent);
-    }
-
 }

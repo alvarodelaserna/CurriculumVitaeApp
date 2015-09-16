@@ -1,5 +1,6 @@
 package com.asm.curriculumvitaeapp.core;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -12,12 +13,86 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.asm.curriculumvitaeapp.R;
-import com.asm.curriculumvitaeapp.activities.MainActivity;
 
 /**
  * Created by alvaro on 16/09/15.
  */
 public class CurriculumVitaeAppUtils {
+
+    private static Context context;
+
+    public CurriculumVitaeAppUtils(Context context){
+        CurriculumVitaeAppUtils.context = context;
+    }
+
+    public static void askUserToExit(){
+        AlertDialog dialog = CurriculumVitaeAppUtils.alertDialog(context, true, context.getString(R.string.question_exit), "", context.getString(R.string.exit), context.getString(R.string.cancel),
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        goToHomePage();
+                    }
+                }, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+        dialog.show();
+    }
+
+    public static void goToHomePage() {
+        Intent startMain = new Intent(Intent.ACTION_MAIN);
+        startMain.addCategory(Intent.CATEGORY_HOME);
+        startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        context.startActivity(startMain);
+        ((Activity)context).finish();
+    }
+
+    public static void askUserToCall(){
+        AlertDialog dialog = CurriculumVitaeAppUtils.alertDialog(context, true, context.getString(R.string.question_call), "", context.getString(R.string.yes), context.getString(R.string.cancel),
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        callMe();
+                    }
+                }, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+        dialog.show();
+    }
+
+    public static void askUserToSendEmail(){
+        AlertDialog dialog = CurriculumVitaeAppUtils.alertDialog(context, true, context.getString(R.string.question_send_email), "", context.getString(R.string.yes), context.getString(R.string.cancel),
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                }, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+        dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialogInterface) {
+                CurriculumVitaeAppUtils.showAlertDialogForContactDetails(context);
+            }
+        });
+        dialog.show();
+    }
+
+    public static void callMe(){
+        Intent intent = new Intent(Intent.ACTION_CALL);
+        intent.setData(Uri.parse("tel:0034670998593"));
+        context.startActivity(intent);
+    }
+
 
     private static AlertDialog alertDialog(Context context, boolean cancelable, String title, String msg, String positive, String negative,
                                            DialogInterface.OnClickListener positiveOnClickListener, DialogInterface.OnClickListener negativeOnClickListener, ViewGroup layout) {
@@ -78,6 +153,6 @@ public class CurriculumVitaeAppUtils {
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "alvaro.delaserna@gmail.com", null));
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, name + " from " + company);
         emailIntent.putExtra(Intent.EXTRA_TEXT, text);
-        CurriculumVitaeApp.getContext().startActivity(Intent.createChooser(emailIntent, "Send mail using..."));
+        context.startActivity(Intent.createChooser(emailIntent, "Send mail using..."));
     }
 }

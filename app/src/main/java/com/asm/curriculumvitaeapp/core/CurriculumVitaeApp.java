@@ -16,7 +16,6 @@ public class CurriculumVitaeApp extends Application {
         super.onCreate();
         CurriculumVitaeApp.context = getApplicationContext();
         CurriculumVitaeApp.application = this;
-        Log.v(TAG, "Application initiated");
     }
 
     @Override
