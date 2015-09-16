@@ -71,6 +71,7 @@ public class CurriculumVitaeAppUtils {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
+                        CurriculumVitaeAppUtils.showAlertDialogForContactDetails(context);
                     }
                 }, new DialogInterface.OnClickListener() {
                     @Override
@@ -78,12 +79,7 @@ public class CurriculumVitaeAppUtils {
                         dialog.cancel();
                     }
                 });
-        dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
-            @Override
-            public void onDismiss(DialogInterface dialogInterface) {
-                CurriculumVitaeAppUtils.showAlertDialogForContactDetails(context);
-            }
-        });
+
         dialog.show();
     }
 

@@ -3,7 +3,7 @@
 
     <string name="my_name">Álvaro de la Serna</string>
     <string name="title_activity_personal_information">PersonalInformationActivity</string>
-    <string name="education">Education</string>
+    <string name="education">Education &amp; skills</string>
     <string name="experience">Experience</string>
     <string name="personal_info">Personal info</string>
     <string name="title_activity_experience">ExperienceActivity</string>
