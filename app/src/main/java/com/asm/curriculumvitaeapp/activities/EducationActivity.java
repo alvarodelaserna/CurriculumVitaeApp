@@ -65,7 +65,10 @@ public class EducationActivity extends Activity {
         skills.add("Machine learning");
         skills.add("Python");
         skills.add("SciKit learn");
+        skills.add("JavaScript");
         skills.add("LaTeX");
+        skills.add("Shell scripting");
+        skills.add("NodeJS");
 
 
         listDataChild.put(listDataHeader.get(0), masters); // Header, Child data

@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.asm.curriculumvitaeapp.fragments.ExperienceFragment">
+
+    <ImageButton
+        android:id="@+id/logo_tapap"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:src="@drawable/logo_tapap"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"/>
+
+    <ImageButton
+        android:id="@+id/logo_progressive"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:src="@drawable/logo_progressive_blue"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"/>
+
+    <ImageButton
+        android:id="@+id/logo_technosite"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:src="@drawable/logo_technosite"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"/>
+
+</LinearLayout>
