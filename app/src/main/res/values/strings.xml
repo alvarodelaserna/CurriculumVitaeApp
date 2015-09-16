@@ -21,4 +21,8 @@
     <string name="enter_contact_details">Please enter your contact details</string>
     <string name="OK">OK</string>
     <string name="empty_fields">There are empty fields</string>
+    <string name="DNI">\n50765311-X</string>
+    <string name="my_name_with_newline">\nÁlvaro de la Serna</string>
+    <string name="my_email_address_with_newline">\nalvaro.delaserna@gmail.com</string>
+    <string name="my_phone_number_with_newline">\n(+34)670-998-593</string>
 </resources>

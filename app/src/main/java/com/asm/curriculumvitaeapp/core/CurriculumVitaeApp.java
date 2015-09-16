@@ -25,8 +25,4 @@ public class CurriculumVitaeApp extends Application {
 
     public static CurriculumVitaeApp getApplication(){ return CurriculumVitaeApp.application; }
 
-    public static Context getContext(){
-        return CurriculumVitaeApp.context;
-    }
-
 }

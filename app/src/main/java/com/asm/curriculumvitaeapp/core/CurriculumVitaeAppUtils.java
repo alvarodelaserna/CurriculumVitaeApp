@@ -130,7 +130,7 @@ public class CurriculumVitaeAppUtils {
         layout.addView(editName);
         layout.addView(editCompany);
 
-        final AlertDialog dialog = CurriculumVitaeAppUtils.alertDialog(context, false, context.getString(R.string.great), context.getString(R.string.enter_contact_details), context.getString(R.string.OK), null, null, null, layout);
+        final AlertDialog dialog = CurriculumVitaeAppUtils.alertDialog(context, false, context.getString(R.string.great), context.getString(R.string.enter_contact_details), context.getString(R.string.OK), context.getString(R.string.cancel), null, null, layout);
         dialog.show();
         // Override positive listener after showing (otherwise we cant obtain positive button)
         dialog.getButton(DialogInterface.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
