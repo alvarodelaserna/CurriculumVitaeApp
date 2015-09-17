@@ -20,8 +20,7 @@ import java.util.List;
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     private final Context _context;
-    private final List<String> _listDataHeader; // header titles
-    // child data in format of header title, child title
+    private final List<String> _listDataHeader;
     private final HashMap<String, List<String>> _listDataChild;
 
     public ExpandableListAdapter(Context context, List<String> listDataHeader,
@@ -91,15 +90,6 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.list_group, null);
         }
-
-        final ImageView logo = (ImageView)convertView.findViewById(R.id.icon);
-
-        if(groupPosition==2) {
-            logo.setImageResource(R.drawable.skills);
-        }else{
-            logo.setImageResource(R.drawable.languages);
-        }
-
 
         TextView listHeader = (TextView) convertView
                 .findViewById(R.id.lblListHeader);
