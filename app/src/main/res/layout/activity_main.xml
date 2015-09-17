@@ -7,55 +7,63 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/picture_of_me"
-        android:layout_width="150dip"
-        android:layout_height="150dip"
-        android:src="@drawable/picture_of_me"
-        android:layout_alignParentTop="true"/>
-    <RelativeLayout
-        android:id="@+id/personal_info_container"
-        android:layout_width="fill_parent"
+    <LinearLayout
+        android:id="@+id/top_container"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/picture_of_me"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:id="@+id/name"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/picture_of_me"
+            android:layout_width="fill_parent"
+            android:layout_height="150dip"
+            android:src="@drawable/picture_of_me"
+            android:layout_weight="1"/>
+        <RelativeLayout
+            android:id="@+id/personal_info_container"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/my_name"
-            android:gravity="center"
-            android:textSize="25sp"/>
-        <ImageView
-            android:id="@+id/ic_action_call"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_below="@+id/name"
             android:layout_marginTop="10dp"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="30dp"
-            android:src="@drawable/action_call"
-            android:clickable="true"/>
-        <ImageView
-            android:id="@+id/ic_action_email"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_below="@+id/name"
-            android:layout_marginTop="10dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="30dp"
-            android:src="@drawable/action_email"
-            android:clickable="true"/>
-    </RelativeLayout>
+            android:layout_weight="1">
 
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/my_name"
+                android:gravity="center"
+                android:textSize="25sp"/>
+            <ImageView
+                android:id="@+id/ic_action_call"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/name"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/action_call"
+                android:clickable="true"/>
+            <ImageView
+                android:id="@+id/ic_action_email"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/name"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/action_email"
+                android:clickable="true"/>
+        </RelativeLayout>
+    </LinearLayout>
     <LinearLayout
         android:id="@+id/buttons_container"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:layout_below="@+id/picture_of_me"
+        android:layout_below="@+id/top_container"
         android:layout_marginTop="5dp">
         <Button
             android:id="@+id/button_show_personal_info"

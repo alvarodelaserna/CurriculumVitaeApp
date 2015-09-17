@@ -21,14 +21,23 @@
     <string name="enter_contact_details">Please enter your contact details</string>
     <string name="OK">OK</string>
     <string name="empty_fields">There are empty fields</string>
-    <string name="DNI">\n50765311-X</string>
-    <string name="my_name_with_newline">\nÁlvaro de la Serna</string>
-    <string name="my_email_address_with_newline">\nalvaro.delaserna@gmail.com</string>
-    <string name="my_phone_number_with_newline">\n(+34)670-998-593</string>
+    <string name="DNI">50765311-X</string>
+    <string name="my_email_address">alvaro.delaserna@gmail.com</string>
+    <string name="my_phone_number">(+34)670-998-593</string>
     <string name="tapap">Tapap</string>
     <string name="progressive_blue">Progressive Blue Technology</string>
     <string name="technosite">Fundosa Technosite</string>
 
-<!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="birth_day">09-01-1988</string>
+    <string name="madrid_spain">Madrid, Spain</string>
+    <string name="place_of_birth">Place of birth:</string>
+    <string name="date_of_birth">Date of birth:</string>
+    <string name="phone_number">Phone number:</string>
+    <string name="dni">DNI:</string>
+    <string name="email">Email address:</string>
+    <string name="name">Full name:</string>
+    <string name="drivers_license">Driver\'s license:</string>
+    <string name="b1">B1</string>
+    <string name="highest_level_of_education">Highest level of education:</string>
+    <string name="masters_degree">Master\'s degree</string>
 </resources>

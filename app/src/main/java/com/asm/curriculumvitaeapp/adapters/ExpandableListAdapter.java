@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.asm.curriculumvitaeapp.R;
@@ -88,17 +89,19 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         if (convertView == null) {
             LayoutInflater layoutInflater = (LayoutInflater) this._context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            if(groupPosition!=2) {
-                convertView = layoutInflater.inflate(R.layout.list_group, null);
-            }else{
-                convertView = layoutInflater.inflate(R.layout.list_group_skills, null);
-            }
+            convertView = layoutInflater.inflate(R.layout.list_group, null);
         }
 
-        TextView lblListHeader = (TextView) convertView
+        final ImageView logo = (ImageView)convertView.findViewById(R.id.icon);
+        if(groupPosition==2) {
+            logo.setImageResource(R.drawable.skills);
+        }else if(groupPosition==3) {
+            logo.setImageResource(R.drawable.logo_languages);
+        }
+        TextView listHeader = (TextView) convertView
                 .findViewById(R.id.lblListHeader);
-        lblListHeader.setTypeface(null, Typeface.BOLD);
-        lblListHeader.setText(headerTitle);
+        listHeader.setTypeface(null, Typeface.BOLD);
+        listHeader.setText(headerTitle);
 
         return convertView;
     }

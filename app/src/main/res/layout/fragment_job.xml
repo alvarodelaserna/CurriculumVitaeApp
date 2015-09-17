@@ -1,32 +1,44 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.asm.curriculumvitaeapp.fragments.JobFragment">
+    android:layout_weight="1">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.asm.curriculumvitaeapp.fragments.JobFragment">
 
-    <ImageView
-        android:id="@+id/company_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/company_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"/>
 
-    <TextView
-        android:id="@+id/working_period"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:textSize="20sp"
-        android:text="2015 - 2015"
-        android:gravity="center"
-        android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/working_period"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textSize="20sp"
+            android:text="2015 - 2015"
+            android:gravity="center"
+            android:layout_marginTop="20dp"/>
 
-    <TextView
-        android:id="@+id/job_description"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:text="what I did"
-        android:textSize="20sp"
-        android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/job_description"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="what I did"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"/>
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/job_skills"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="what I worked with"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+</ScrollView>

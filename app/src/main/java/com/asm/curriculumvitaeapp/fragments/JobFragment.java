@@ -19,18 +19,21 @@ public class JobFragment extends Fragment {
     private static final String COMPANY_NAME = "name";
     private static final String JOB_DURATION = "duration";
     private static final String JOB_DESCRIPTION = "description";
+    private static final String JOB_SKILLS = "skills";
 
     // TODO: Rename and change types of parameters
-    private String companyName, jobDuration, jobDescription;
+    private String companyName, jobDuration, jobDescription, jobSkills;
 
     private OnFragmentInteractionListener mListener;
 
-    public static JobFragment newInstance(String companyName, String jobDuration, String jobDescription) {
+    public static JobFragment newInstance(String companyName, String jobDuration,
+                                          String jobDescription, String jobSkills) {
         JobFragment fragment = new JobFragment();
         Bundle args = new Bundle();
         args.putString(COMPANY_NAME, companyName);
         args.putString(JOB_DURATION, jobDuration);
         args.putString(JOB_DESCRIPTION, jobDescription);
+        args.putString(JOB_SKILLS, jobSkills);
         fragment.setArguments(args);
         return fragment;
     }
@@ -46,6 +49,7 @@ public class JobFragment extends Fragment {
             companyName = getArguments().getString(COMPANY_NAME);
             jobDuration = getArguments().getString(JOB_DURATION);
             jobDescription = getArguments().getString(JOB_DESCRIPTION);
+            jobSkills = getArguments().getString(JOB_SKILLS);
         }
     }
 
@@ -56,8 +60,10 @@ public class JobFragment extends Fragment {
         ImageView company_logo = (ImageView)view.findViewById(R.id.company_logo);
         TextView working_period = (TextView)view.findViewById(R.id.working_period);
         TextView job_description = (TextView)view.findViewById(R.id.job_description);
+        TextView job_skills = (TextView)view.findViewById(R.id.job_skills);
         working_period.setText(jobDuration);
         job_description.setText(jobDescription);
+        job_skills.setText(jobSkills);
         if(companyName.equals("Tapap")) {
             company_logo.setImageResource(R.drawable.logo_tapap);
         }else if(companyName.equals("Progressive Blue Technology")) {
@@ -91,16 +97,6 @@ public class JobFragment extends Fragment {
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p/>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         public void onFragmentInteraction(Uri uri);

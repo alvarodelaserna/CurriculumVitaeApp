@@ -38,6 +38,7 @@ public class EducationActivity extends Activity {
         listDataHeader.add("Master's Degree in Multimedia and Communications");
         listDataHeader.add("Bachelor's Degree in Audiovisual Systems Engineering");
         listDataHeader.add("Skills");
+        listDataHeader.add("Languages");
 
         List<String> masters = new ArrayList<>();
         masters.add("2014 - 2015");
@@ -70,10 +71,15 @@ public class EducationActivity extends Activity {
         skills.add("Shell scripting");
         skills.add("NodeJS");
 
+        List<String> languages = new ArrayList<>();
+        languages.add("Spanish - Mother tongue");
+        languages.add("English - Full professional competences. Certificate in Advanced English");
+        languages.add("French - Basic competences");
 
         listDataChild.put(listDataHeader.get(0), masters); // Header, Child data
         listDataChild.put(listDataHeader.get(1), bachelors);
         listDataChild.put(listDataHeader.get(2), skills);
+        listDataChild.put(listDataHeader.get(3), languages);
     }
 
 }
