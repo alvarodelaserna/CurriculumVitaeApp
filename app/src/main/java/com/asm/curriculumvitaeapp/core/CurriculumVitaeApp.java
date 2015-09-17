@@ -2,7 +2,6 @@ package com.asm.curriculumvitaeapp.core;
 
 import android.app.Application;
 import android.content.Context;
-import android.util.Log;
 
 /**
  * Created by alvaro on 16/09/15.

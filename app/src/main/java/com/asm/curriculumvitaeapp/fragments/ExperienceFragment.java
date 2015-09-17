@@ -11,15 +11,10 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 import com.asm.curriculumvitaeapp.R;
-import com.asm.curriculumvitaeapp.activities.MainActivity;
 
 public class ExperienceFragment extends Fragment {
 
-    private ImageButton tapap, progressive, technosite;
-
     private static final String TAG_TAPAP = "tapap";
-    private final String TAG_PROGRESSIVE_BLUE = "progressive";
-    private final String TAG_TECHNOSITE = "technosite";
     private OnFragmentInteractionListener mListener;
 
     public ExperienceFragment() {
@@ -36,9 +31,9 @@ public class ExperienceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_experience, container, false);
-        tapap = (ImageButton)view.findViewById(R.id.logo_tapap);
-        progressive = (ImageButton)view.findViewById(R.id.logo_progressive);
-        technosite = (ImageButton)view.findViewById(R.id.logo_technosite);
+        ImageButton tapap = (ImageButton) view.findViewById(R.id.logo_tapap);
+        ImageButton progressive = (ImageButton) view.findViewById(R.id.logo_progressive);
+        ImageButton technosite = (ImageButton) view.findViewById(R.id.logo_technosite);
         tapap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,7 +79,7 @@ public class ExperienceFragment extends Fragment {
 
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        public void onFragmentInteraction(Uri uri);
+        void onFragmentInteraction(Uri uri);
     }
 
     private static JobFragment createJobFragment(String companyName, String jobDuration,
@@ -109,6 +104,7 @@ public class ExperienceFragment extends Fragment {
                 " applications depending on our clients' needs, working with Eclipse.", "Tools:\n"+
                 "- Eclipse\n- Java\n- REST\n- JSON\n- SQLite\n- PHP");
         FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+        String TAG_PROGRESSIVE_BLUE = "progressive";
         fragmentTransaction.replace(R.id.fragment_container, jfProgressiveBlue, TAG_PROGRESSIVE_BLUE);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
@@ -120,6 +116,7 @@ public class ExperienceFragment extends Fragment {
                 " environments for telecare using Raspberry Pi and NodeJS.", "Tools:\n "+"- Eclipse\n" +
                 "- Java\n- REST\n- JSON\n- OpenCV\n- Google Glass\n- RaspberryPi\n- NodeJS\n- Matlab\n- Bluetooth LTE");
         FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+        String TAG_TECHNOSITE = "technosite";
         fragmentTransaction.replace(R.id.fragment_container, jfTechnosite, TAG_TECHNOSITE);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();

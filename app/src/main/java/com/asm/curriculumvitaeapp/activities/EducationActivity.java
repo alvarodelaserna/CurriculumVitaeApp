@@ -14,10 +14,10 @@ import java.util.List;
 
 public class EducationActivity extends Activity {
 
-    ExpandableListAdapter expandableListAdapter;
-    ExpandableListView expandableListView;
-    List<String> listDataHeader;
-    HashMap<String, List<String>> listDataChild;
+    private ExpandableListAdapter expandableListAdapter;
+    private ExpandableListView expandableListView;
+    private List<String> listDataHeader;
+    private HashMap<String, List<String>> listDataChild;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -41,7 +41,7 @@ public class CurriculumVitaeAppUtils {
         dialog.show();
     }
 
-    public static void goToHomePage() {
+    private static void goToHomePage() {
         Intent startMain = new Intent(Intent.ACTION_MAIN);
         startMain.addCategory(Intent.CATEGORY_HOME);
         startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -83,7 +83,7 @@ public class CurriculumVitaeAppUtils {
         dialog.show();
     }
 
-    public static void callMe(){
+    private static void callMe(){
         Intent intent = new Intent(Intent.ACTION_CALL);
         intent.setData(Uri.parse("tel:0034670998593"));
         context.startActivity(intent);
@@ -109,12 +109,12 @@ public class CurriculumVitaeAppUtils {
         return alertDialogBuilder.create();
     }
 
-    public static AlertDialog alertDialog(Context context, boolean cancelable, String title, String msg, String positive, String negative,
-                                          DialogInterface.OnClickListener positiveOnClickListener, DialogInterface.OnClickListener negativeOnClickListener) {
+    private static AlertDialog alertDialog(Context context, boolean cancelable, String title, String msg, String positive, String negative,
+                                           DialogInterface.OnClickListener positiveOnClickListener, DialogInterface.OnClickListener negativeOnClickListener) {
         return CurriculumVitaeAppUtils.alertDialog(context, cancelable, title, msg, positive, negative, positiveOnClickListener, negativeOnClickListener, null);
     }
 
-    public static void showAlertDialogForContactDetails(final Context context) {
+    private static void showAlertDialogForContactDetails(final Context context) {
 
         final LinearLayout layout = new LinearLayout(context);
         final EditText editName = new EditText(context);
@@ -144,7 +144,7 @@ public class CurriculumVitaeAppUtils {
         });
     }
 
-    public static void sendEmail(String name, String company) {
+    private static void sendEmail(String name, String company) {
         String text = "Hello, my name is " + name + " from: " + company + ".\nI found your CV very interesting. Please contact me ASAP.\nBest regards, \n" + name;
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "alvaro.delaserna@gmail.com", null));
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, name + " from " + company);

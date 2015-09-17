@@ -19,10 +19,10 @@ import java.util.List;
  */
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
-    private Context _context;
-    private List<String> _listDataHeader; // header titles
+    private final Context _context;
+    private final List<String> _listDataHeader; // header titles
     // child data in format of header title, child title
-    private HashMap<String, List<String>> _listDataChild;
+    private final HashMap<String, List<String>> _listDataChild;
 
     public ExpandableListAdapter(Context context, List<String> listDataHeader,
                                  HashMap<String, List<String>> listChildData) {
@@ -85,7 +85,6 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded,
                              View convertView, ViewGroup parent) {
-        GroupHolder holder = new GroupHolder();
         String headerTitle = (String) getGroup(groupPosition);
         if (convertView == null) {
             LayoutInflater layoutInflater = (LayoutInflater) this._context
@@ -95,34 +94,29 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
         final ImageView logo = (ImageView)convertView.findViewById(R.id.icon);
 
+        if(groupPosition==2) {
+            logo.setImageResource(R.drawable.skills);
+        }else{
+            logo.setImageResource(R.drawable.languages);
+        }
+
+
         TextView listHeader = (TextView) convertView
                 .findViewById(R.id.lblListHeader);
         listHeader.setTypeface(null, Typeface.BOLD);
         listHeader.setText(headerTitle);
 
-        holder.groupName = listHeader;
-        holder.image = logo;
-        if(groupPosition==2) {
-            holder.image.setImageResource(R.drawable.skills);
-        }else if(groupPosition==3) {
-            holder.image.setImageResource(R.drawable.languages);
-        }
-        convertView.setTag(holder);
         return convertView;
     }
 
     @Override
     public boolean hasStableIds() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
-        return true;
+        return false;
     }
 
-    private static class GroupHolder {
-        public TextView groupName;
-        public ImageView image;
-    }
 }

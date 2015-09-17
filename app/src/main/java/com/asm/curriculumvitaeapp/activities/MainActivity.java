@@ -15,8 +15,6 @@ import com.asm.curriculumvitaeapp.core.CurriculumVitaeAppUtils;
 public class MainActivity extends Activity {
 
     private final String TAG = MainActivity.class.getCanonicalName();
-    private ImageView ic_action_call, ic_action_email;
-    private Button buttonPersonalInfo, buttonExperience, buttonEducation;
     private Context mContext;
 
     @Override
@@ -27,11 +25,11 @@ public class MainActivity extends Activity {
         mContext = this;
         new CurriculumVitaeAppUtils(this);
 
-        ic_action_call = (ImageView)findViewById(R.id.ic_action_call);
-        ic_action_email = (ImageView)findViewById(R.id.ic_action_email);
-        buttonPersonalInfo = (Button)findViewById(R.id.button_show_personal_info);
-        buttonExperience = (Button)findViewById(R.id.button_show_professional_experience);
-        buttonEducation = (Button)findViewById(R.id.button_show_education);
+        ImageView ic_action_call = (ImageView) findViewById(R.id.ic_action_call);
+        ImageView ic_action_email = (ImageView) findViewById(R.id.ic_action_email);
+        Button buttonPersonalInfo = (Button) findViewById(R.id.button_show_personal_info);
+        Button buttonExperience = (Button) findViewById(R.id.button_show_professional_experience);
+        Button buttonEducation = (Button) findViewById(R.id.button_show_education);
 
         buttonPersonalInfo.setOnClickListener(new View.OnClickListener() {
             @Override
