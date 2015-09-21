@@ -17,6 +17,8 @@ public class MainActivity extends Activity {
 
     private final String TAG = MainActivity.class.getCanonicalName();
     private Context mContext;
+    private ImageView ic_action_call, ic_action_email;
+    private TextView buttonPersonalInfo, buttonExperience, buttonEducation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +28,12 @@ public class MainActivity extends Activity {
         mContext = this;
         new CurriculumVitaeAppUtils(this);
 
-        ImageView ic_action_call = (ImageView) findViewById(R.id.ic_action_call);
-        ImageView ic_action_email = (ImageView) findViewById(R.id.ic_action_email);
-        TextView buttonPersonalInfo = (TextView) findViewById(R.id.button_show_personal_info);
-        TextView buttonExperience = (TextView) findViewById(R.id.button_show_professional_experience);
-        TextView buttonEducation = (TextView) findViewById(R.id.button_show_education);
+        initElements();
 
+        setListenersToButtons();
+    }
+
+    private void setListenersToButtons() {
         buttonPersonalInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,6 +64,14 @@ public class MainActivity extends Activity {
                 CurriculumVitaeAppUtils.askUserToSendEmail();
             }
         });
+    }
+
+    private void initElements() {
+        ic_action_call = (ImageView) findViewById(R.id.ic_action_call);
+        ic_action_email = (ImageView) findViewById(R.id.ic_action_email);
+        buttonPersonalInfo = (TextView) findViewById(R.id.button_show_personal_info);
+        buttonExperience = (TextView) findViewById(R.id.button_show_professional_experience);
+        buttonEducation = (TextView) findViewById(R.id.button_show_education);
     }
 
     @Override
