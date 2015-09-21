@@ -22,13 +22,14 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:src="@drawable/picture_of_me"
-            android:layout_weight="40"/>
+            android:layout_weight="40"
+            android:layout_gravity="center_vertical"/>
         <RelativeLayout
             android:id="@+id/personal_info_container"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
-            android:layout_marginTop="10dp"
-            android:layout_weight="60">
+            android:layout_weight="60"
+            android:gravity="center_vertical">
 
             <TextView
                 android:id="@+id/name"
@@ -36,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/my_name"
                 android:gravity="center"
-                android:textSize="25sp"/>
+                style="@android:style/TextAppearance.Large"/>
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
