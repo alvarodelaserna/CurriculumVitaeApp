@@ -70,35 +70,38 @@
         android:orientation="vertical"
         android:layout_weight="0.65"
         android:layout_marginTop="5dp">
-        <Button
+        <TextView
             android:id="@+id/button_show_personal_info"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:layout_marginTop="5dp"
             android:background="@drawable/button_background_switch"
             android:text="@string/personal_info"
-            android:textSize="20sp"
+            style="@android:style/TextAppearance.Medium"
             android:gravity="center"
-            android:layout_weight="1"/>
-        <Button
+            android:layout_weight="1"
+            android:clickable="true"/>
+        <TextView
             android:id="@+id/button_show_professional_experience"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:layout_marginTop="5dp"
             android:background="@drawable/button_background_switch"
             android:text="@string/experience"
-            android:textSize="20sp"
+            style="@android:style/TextAppearance.Medium"
             android:gravity="center"
-            android:layout_weight="1"/>
-        <Button
+            android:layout_weight="1"
+            android:clickable="true"/>
+        <TextView
             android:id="@+id/button_show_education"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:layout_marginTop="5dp"
             android:background="@drawable/button_background_switch"
             android:text="@string/education"
-            android:textSize="20sp"
+            style="@android:style/TextAppearance.Medium"
             android:gravity="center"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:clickable="true"/>
     </LinearLayout>
 </LinearLayout>

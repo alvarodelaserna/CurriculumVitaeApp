@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.asm.curriculumvitaeapp.R;
 import com.asm.curriculumvitaeapp.core.CurriculumVitaeAppUtils;
@@ -27,9 +28,9 @@ public class MainActivity extends Activity {
 
         ImageView ic_action_call = (ImageView) findViewById(R.id.ic_action_call);
         ImageView ic_action_email = (ImageView) findViewById(R.id.ic_action_email);
-        Button buttonPersonalInfo = (Button) findViewById(R.id.button_show_personal_info);
-        Button buttonExperience = (Button) findViewById(R.id.button_show_professional_experience);
-        Button buttonEducation = (Button) findViewById(R.id.button_show_education);
+        TextView buttonPersonalInfo = (TextView) findViewById(R.id.button_show_personal_info);
+        TextView buttonExperience = (TextView) findViewById(R.id.button_show_professional_experience);
+        TextView buttonEducation = (TextView) findViewById(R.id.button_show_education);
 
         buttonPersonalInfo.setOnClickListener(new View.OnClickListener() {
             @Override
