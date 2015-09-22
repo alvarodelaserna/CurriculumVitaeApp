@@ -80,7 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:layout_marginTop="5dp"
-            android:src="@drawable/personal_info"
+            android:src="@drawable/button_personal_info"
             android:background="@android:color/transparent"
             android:gravity="center"
             android:layout_weight="0.5"/>
@@ -89,7 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:layout_marginTop="5dp"
-            android:src="@drawable/experience"
+            android:src="@drawable/button_experience"
             android:background="@android:color/transparent"
             android:gravity="center"
             android:layout_weight="0.5"/>
@@ -106,7 +106,7 @@
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:layout_marginTop="5dp"
-            android:src="@drawable/education"
+            android:src="@drawable/button_education"
             android:background="@android:color/transparent"
             android:gravity="center"
             android:layout_weight="0.5"/>
@@ -115,7 +115,7 @@
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:layout_marginTop="5dp"
-            android:src="@drawable/skills"
+            android:src="@drawable/button_skills"
             android:background="@android:color/transparent"
             android:gravity="center"
             android:layout_weight="0.5"/>
