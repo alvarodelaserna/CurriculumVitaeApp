@@ -23,7 +23,7 @@
     <string name="empty_fields">There are empty fields</string>
     <string name="DNI">50765311-X</string>
     <string name="my_email_address">alvaro.delaserna@gmail.com</string>
-    <string name="my_phone_number">(+34)670-998-593</string>
+    <string name="my_phone_number">(+34) 670-998-593</string>
     <string name="tapap">Tapap</string>
     <string name="progressive_blue">Progressive Blue Technology</string>
     <string name="technosite">Fundosa Technosite</string>
@@ -37,10 +37,11 @@
     <string name="email">Email address:</string>
     <string name="name">Full name:</string>
     <string name="drivers_license">Driver\'s license:</string>
-    <string name="b1">B1</string>
+    <string name="b">B</string>
     <string name="highest_level_of_education">Highest level of education:</string>
     <string name="masters_degree">Master\'s degree</string>
 
     <string name="linkedin_url">https://es.linkedin.com/pub/alvaro-de-la-serna-martinez/67/b50/445</string>
     <string name="open_with">Open with:</string>
+    <string name="my_address">C/ Juan Álvarez Mendizábal 46, 28008 Madrid, Spain</string>
 </resources>
