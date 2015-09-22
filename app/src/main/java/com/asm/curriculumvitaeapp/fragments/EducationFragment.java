@@ -45,7 +45,7 @@ public class EducationFragment extends Fragment {
         expandableListView = (ExpandableListView) view.findViewById(R.id.expandable_list_view);
         prepareListData();
 
-        expandableListAdapter = new ExpandableListAdapter(CurriculumVitaeApp.getApplication().getBaseContext(), listDataHeader, listDataChild);
+        expandableListAdapter = new ExpandableListAdapter(CurriculumVitaeApp.getContext(), listDataHeader, listDataChild);
         expandableListView.setAdapter(expandableListAdapter);
 
         return view;

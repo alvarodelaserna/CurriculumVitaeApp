@@ -55,7 +55,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.33"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/logo_linked_in"
+                    android:src="@drawable/button_linkedin"
                     android:background="@android:color/transparent" />
             </LinearLayout>
         </RelativeLayout>
