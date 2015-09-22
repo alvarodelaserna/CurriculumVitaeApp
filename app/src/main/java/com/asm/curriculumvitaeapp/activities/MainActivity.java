@@ -16,11 +16,13 @@ import com.asm.curriculumvitaeapp.fragments.ExperienceFragment;
 import com.asm.curriculumvitaeapp.fragments.JobFragment;
 import com.asm.curriculumvitaeapp.fragments.MainFragment;
 import com.asm.curriculumvitaeapp.fragments.PersonalInformationFragment;
+import com.asm.curriculumvitaeapp.fragments.SkillsFragment;
 
 
 public class MainActivity extends FragmentActivity implements MainFragment.OnFragmentInteractionListener,
         ExperienceFragment.OnFragmentInteractionListener, JobFragment.OnFragmentInteractionListener,
-        PersonalInformationFragment.OnFragmentInteractionListener, EducationFragment.OnFragmentInteractionListener {
+        PersonalInformationFragment.OnFragmentInteractionListener, EducationFragment.OnFragmentInteractionListener,
+        SkillsFragment.OnFragmentInteractionListener {
 
     private final String TAG = MainActivity.class.getCanonicalName();
     private Context mContext;

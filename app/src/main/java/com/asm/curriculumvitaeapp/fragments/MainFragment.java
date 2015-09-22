@@ -20,8 +20,7 @@ import com.asm.curriculumvitaeapp.core.CurriculumVitaeAppUtils;
  */
 public class MainFragment extends Fragment {
 
-    private static final String TAG_EXPERIENCE = "experience",
-            TAG_PROGRESSIVE_BLUE = "progressive", TAG_TECHNOSITE = "technosite", TAG_MAIN = "main",
+    private static final String TAG_EXPERIENCE = "experience", TAG_SKILLS = "skills",
             TAG_PERSONAL_INFORMATION = "personal", TAG_EDUCATION = "education";
     private OnFragmentInteractionListener mListener;
     private ImageButton ic_action_call, ic_action_email, ic_action_linkedin;
@@ -92,6 +91,12 @@ public class MainFragment extends Fragment {
                 switchToEducationFragment();
             }
         });
+        buttonSkills.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switchToSkillsFragment();
+            }
+        });
         ic_action_call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -156,6 +161,16 @@ public class MainFragment extends Fragment {
                 R.anim.enter_from_left, R.anim.exit_to_right);
         fragmentTransaction.replace(R.id.fragment_container, educationFragment, TAG_EDUCATION);
         fragmentTransaction.addToBackStack(TAG_EDUCATION);
+        fragmentTransaction.commit();
+    }
+
+    private void switchToSkillsFragment(){
+        SkillsFragment skillsFragment = new SkillsFragment();
+        FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left,
+                R.anim.enter_from_left, R.anim.exit_to_right);
+        fragmentTransaction.replace(R.id.fragment_container, skillsFragment, TAG_SKILLS);
+        fragmentTransaction.addToBackStack(TAG_SKILLS);
         fragmentTransaction.commit();
     }
 }

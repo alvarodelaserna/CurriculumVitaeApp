@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
         style="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/black"
         android:gravity="center"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"/>
