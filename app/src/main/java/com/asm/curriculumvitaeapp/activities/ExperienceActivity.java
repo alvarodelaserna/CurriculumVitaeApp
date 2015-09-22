@@ -13,6 +13,8 @@ import com.asm.curriculumvitaeapp.fragments.JobFragment;
 public class ExperienceActivity extends FragmentActivity implements ExperienceFragment.OnFragmentInteractionListener, JobFragment.OnFragmentInteractionListener {
 
     private final String TAG = ExperienceActivity.class.getCanonicalName();
+    private static final String TAG_EXPERIENCE = "experience";
+    private ExperienceFragment experienceFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +25,8 @@ public class ExperienceActivity extends FragmentActivity implements ExperienceFr
             if (savedInstanceState != null) {
                 return;
             }
-            ExperienceFragment experienceFragment = new ExperienceFragment();
+            experienceFragment = new ExperienceFragment();
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            String TAG_EXPERIENCE = "experience";
             fragmentTransaction.add(R.id.fragment_container, experienceFragment, TAG_EXPERIENCE);
             fragmentTransaction.commit();
         }

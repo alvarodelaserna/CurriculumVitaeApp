@@ -17,13 +17,6 @@
         android:layout_weight="0.35"
         android:orientation="horizontal"
         android:weightSum="100">
-        <ImageView
-            android:id="@+id/picture_of_me"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:src="@drawable/picture_of_me"
-            android:layout_weight="40"
-            android:layout_gravity="center_vertical"/>
         <RelativeLayout
             android:id="@+id/personal_info_container"
             android:layout_width="0dp"
@@ -62,6 +55,13 @@
                     android:background="@android:color/transparent" />
             </LinearLayout>
         </RelativeLayout>
+        <ImageView
+            android:id="@+id/picture_of_me"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/picture_of_me"
+            android:layout_weight="40"
+            android:layout_gravity="center_vertical"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/buttons_container"
