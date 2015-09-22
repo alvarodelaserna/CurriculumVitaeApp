@@ -5,12 +5,14 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 import com.asm.curriculumvitaeapp.R;
+import com.asm.curriculumvitaeapp.core.CurriculumVitaeApp;
 import com.asm.curriculumvitaeapp.core.CurriculumVitaeAppUtils;
 
 /**
@@ -18,8 +20,9 @@ import com.asm.curriculumvitaeapp.core.CurriculumVitaeAppUtils;
  */
 public class MainFragment extends Fragment {
 
-    private static final String TAG_EXPERIENCE = "experience", TAG_TAPAP = "tapap",
-            TAG_PROGRESSIVE_BLUE = "progressive", TAG_TECHNOSITE = "technosite";
+    private static final String TAG_EXPERIENCE = "experience",
+            TAG_PROGRESSIVE_BLUE = "progressive", TAG_TECHNOSITE = "technosite", TAG_MAIN = "main",
+            TAG_PERSONAL_INFORMATION = "personal", TAG_EDUCATION = "education";
     private OnFragmentInteractionListener mListener;
     private ImageButton ic_action_call, ic_action_email, ic_action_linkedin;
     private ImageButton buttonPersonalInfo, buttonExperience, buttonEducation, buttonSkills;
@@ -74,19 +77,19 @@ public class MainFragment extends Fragment {
         buttonPersonalInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                startPersonalInformationActivity();
+                switchToPersonalInformationFragment();
             }
         });
         buttonExperience.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                startExperienceActivity();
+                switchToExperienceFragment();
             }
         });
         buttonEducation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                startEducationActivity();
+                switchToEducationFragment();
             }
         });
         ic_action_call.setOnClickListener(new View.OnClickListener() {
@@ -124,5 +127,35 @@ public class MainFragment extends Fragment {
         buttonExperience = (ImageButton) view.findViewById(R.id.button_show_professional_experience);
         buttonEducation = (ImageButton) view.findViewById(R.id.button_show_education);
         buttonSkills = (ImageButton) view.findViewById(R.id.button_show_skills);
+    }
+
+    private void switchToPersonalInformationFragment(){
+        PersonalInformationFragment personalInformationFragment = new PersonalInformationFragment();
+        FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left,
+                R.anim.enter_from_left, R.anim.exit_to_right);
+        fragmentTransaction.replace(R.id.fragment_container, personalInformationFragment, TAG_PERSONAL_INFORMATION);
+        fragmentTransaction.addToBackStack(TAG_PERSONAL_INFORMATION);
+        fragmentTransaction.commit();
+    }
+
+    private void switchToExperienceFragment(){
+        ExperienceFragment experienceFragment = new ExperienceFragment();
+        FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left,
+                R.anim.enter_from_left, R.anim.exit_to_right);
+        fragmentTransaction.replace(R.id.fragment_container, experienceFragment, TAG_EXPERIENCE);
+        fragmentTransaction.addToBackStack(TAG_EXPERIENCE);
+        fragmentTransaction.commit();
+    }
+
+    private void switchToEducationFragment(){
+        EducationFragment educationFragment = new EducationFragment();
+        FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left,
+                R.anim.enter_from_left, R.anim.exit_to_right);
+        fragmentTransaction.replace(R.id.fragment_container, educationFragment, TAG_EDUCATION);
+        fragmentTransaction.addToBackStack(TAG_EDUCATION);
+        fragmentTransaction.commit();
     }
 }

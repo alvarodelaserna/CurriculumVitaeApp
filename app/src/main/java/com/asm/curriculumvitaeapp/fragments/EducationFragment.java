@@ -1,34 +1,81 @@
-package com.asm.curriculumvitaeapp.activities;
+package com.asm.curriculumvitaeapp.fragments;
 
-import android.app.Activity;
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 
 import com.asm.curriculumvitaeapp.R;
 import com.asm.curriculumvitaeapp.adapters.ExpandableListAdapter;
+import com.asm.curriculumvitaeapp.core.CurriculumVitaeApp;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * Created by alvaro on 22/09/15.
+ */
+public class EducationFragment extends Fragment {
 
-public class EducationActivity extends Activity {
-
+    private OnFragmentInteractionListener mListener;
     private ExpandableListAdapter expandableListAdapter;
     private ExpandableListView expandableListView;
     private List<String> listDataHeader;
     private HashMap<String, List<String>> listDataChild;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_education);
+    public EducationFragment() {
+        // Required empty public constructor
+    }
 
-        expandableListView = (ExpandableListView) findViewById(R.id.expandable_list_view);
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_education, container, false);
+        expandableListView = (ExpandableListView) view.findViewById(R.id.expandable_list_view);
         prepareListData();
 
-        expandableListAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
+        expandableListAdapter = new ExpandableListAdapter(CurriculumVitaeApp.getApplication().getBaseContext(), listDataHeader, listDataChild);
         expandableListView.setAdapter(expandableListAdapter);
+
+        return view;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        try {
+            mListener = (OnFragmentInteractionListener) getActivity();
+        } catch (ClassCastException e) {
+            throw new ClassCastException(getActivity().toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
+
+    public interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
+        void onFragmentInteraction(Uri uri);
     }
 
     private void prepareListData() {
@@ -81,5 +128,4 @@ public class EducationActivity extends Activity {
         listDataChild.put(listDataHeader.get(2), skills);
         listDataChild.put(listDataHeader.get(3), languages);
     }
-
 }

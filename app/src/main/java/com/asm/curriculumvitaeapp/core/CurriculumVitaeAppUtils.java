@@ -151,4 +151,5 @@ public class CurriculumVitaeAppUtils {
         emailIntent.putExtra(Intent.EXTRA_TEXT, text);
         context.startActivity(Intent.createChooser(emailIntent, "Send mail using..."));
     }
+
 }

@@ -16,11 +16,7 @@ import com.asm.curriculumvitaeapp.R;
  */
 public class PersonalInformationFragment extends Fragment {
 
-    private static final String TAG_EXPERIENCE = "experience", TAG_TAPAP = "tapap",
-            TAG_PROGRESSIVE_BLUE = "progressive", TAG_TECHNOSITE = "technosite";
     private OnFragmentInteractionListener mListener;
-    private ImageButton ic_action_call, ic_action_email, ic_action_linkedin;
-    private ImageButton buttonPersonalInfo, buttonExperience, buttonEducation, buttonSkills;
 
     public PersonalInformationFragment() {
         // Required empty public constructor
