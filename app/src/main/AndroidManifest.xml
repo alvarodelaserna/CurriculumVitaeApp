@@ -20,14 +20,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.PersonalInformationActivity"
-            android:label="@string/title_activity_personal_information" >
-        </activity>
-        <activity
-            android:name=".activities.ExperienceActivity"
-            android:label="@string/title_activity_experience" >
-        </activity>
-        <activity
             android:name=".activities.EducationActivity"
             android:label="@string/title_activity_education" >
         </activity>

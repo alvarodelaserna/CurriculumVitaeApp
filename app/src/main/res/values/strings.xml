@@ -40,4 +40,7 @@
     <string name="b1">B1</string>
     <string name="highest_level_of_education">Highest level of education:</string>
     <string name="masters_degree">Master\'s degree</string>
+
+    <string name="linkedin_url">https://es.linkedin.com/pub/alvaro-de-la-serna-martinez/67/b50/445</string>
+    <string name="open_with">Open with:</string>
 </resources>

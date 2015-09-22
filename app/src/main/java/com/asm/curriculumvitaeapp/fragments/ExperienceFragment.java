@@ -14,7 +14,8 @@ import com.asm.curriculumvitaeapp.R;
 
 public class ExperienceFragment extends Fragment {
 
-    private static final String TAG_EXPERIENCE = "experience", TAG_TAPAP = "tapap", TAG_PROGRESSIVE_BLUE = "progressive", TAG_TECHNOSITE = "technosite";
+    private static final String TAG_EXPERIENCE = "experience", TAG_TAPAP = "tapap",
+            TAG_PROGRESSIVE_BLUE = "progressive", TAG_TECHNOSITE = "technosite";
     private OnFragmentInteractionListener mListener;
 
     public ExperienceFragment() {
@@ -93,7 +94,8 @@ public class ExperienceFragment extends Fragment {
                 " Production, Design and Programming departments.", "Tools:\n"+"- Android Studio\n" +
                 "- Java\n- REST\n- JSON\n- SQLite");
         FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left, R.anim.enter_from_left, R.anim.exit_to_right);
+        fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left,
+                R.anim.enter_from_left, R.anim.exit_to_right);
         fragmentTransaction.replace(R.id.fragment_container, jfTapap, TAG_TAPAP);
         fragmentTransaction.addToBackStack(TAG_EXPERIENCE);
         fragmentTransaction.commit();
@@ -105,19 +107,23 @@ public class ExperienceFragment extends Fragment {
                 " applications depending on our clients' needs, working with Eclipse.", "Tools:\n" +
                 "- Eclipse\n- Java\n- REST\n- JSON\n- SQLite\n- PHP");
         FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left, R.anim.enter_from_left, R.anim.exit_to_right);
+        fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left,
+                R.anim.enter_from_left, R.anim.exit_to_right);
         fragmentTransaction.replace(R.id.fragment_container, jfProgressiveBlue, TAG_PROGRESSIVE_BLUE);
         fragmentTransaction.addToBackStack(TAG_EXPERIENCE);
         fragmentTransaction.commit();
     }
 
     private void switchToTechnositeFragment(){
-        JobFragment jfTechnosite = createJobFragment("Fundosa Technosite", "June 2014 - August 2014", "I participated in the design and development of a contextual" +
-                " help system working with OpenCV on Google Glass, as wellas a Gateway for the management of safety devices and" +
-                " environments for telecare using Raspberry Pi and NodeJS.", "Tools:\n " + "- Eclipse\n" +
-                "- Java\n- REST\n- JSON\n- OpenCV\n- Google Glass\n- RaspberryPi\n- NodeJS\n- Matlab\n- Bluetooth LTE");
+        JobFragment jfTechnosite = createJobFragment("Fundosa Technosite", "June 2014 - August 2014",
+                "I participated in the design and development of a contextual help system working " +
+                        "with OpenCV on Google Glass, as wellas a Gateway for the management of " +
+                        "safety devices and environments for telecare using Raspberry Pi and NodeJS.",
+                "Tools:\n " + "- Eclipse\n- Java\n- REST\n- JSON\n- OpenCV\n- Google Glass\n" +
+                        "- RaspberryPi\n- NodeJS\n- Matlab\n- Bluetooth LTE");
         FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left, R.anim.enter_from_left, R.anim.exit_to_right);
+        fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left,
+                R.anim.enter_from_left, R.anim.exit_to_right);
         fragmentTransaction.replace(R.id.fragment_container, jfTechnosite, TAG_TECHNOSITE);
         fragmentTransaction.addToBackStack(TAG_EXPERIENCE);
         fragmentTransaction.commit();

@@ -1,24 +1,29 @@
 package com.asm.curriculumvitaeapp.activities;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
+import android.widget.ImageButton;
 
 import com.asm.curriculumvitaeapp.R;
 import com.asm.curriculumvitaeapp.core.CurriculumVitaeAppUtils;
+import com.asm.curriculumvitaeapp.fragments.ExperienceFragment;
+import com.asm.curriculumvitaeapp.fragments.JobFragment;
+import com.asm.curriculumvitaeapp.fragments.MainFragment;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends FragmentActivity implements MainFragment.OnFragmentInteractionListener,
+        ExperienceFragment.OnFragmentInteractionListener, JobFragment.OnFragmentInteractionListener {
 
     private final String TAG = MainActivity.class.getCanonicalName();
     private Context mContext;
-    private ImageView ic_action_call, ic_action_email;
-    private TextView buttonPersonalInfo, buttonExperience, buttonEducation;
+    private ImageButton ic_action_call, ic_action_email, ic_action_linkedin;
+    private ImageButton buttonPersonalInfo, buttonExperience, buttonEducation, buttonSkills;
+    private static final String TAG_MAIN = "main";
+    private MainFragment mainFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,50 +33,15 @@ public class MainActivity extends Activity {
         mContext = this;
         new CurriculumVitaeAppUtils(this);
 
-        initElements();
-
-        setListenersToButtons();
-    }
-
-    private void setListenersToButtons() {
-        buttonPersonalInfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startPersonalInformationActivity();
+        if (findViewById(R.id.fragment_container) != null) {
+            if (savedInstanceState != null) {
+                return;
             }
-        });
-        buttonExperience.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startExperienceActivity();
-            }
-        });
-        buttonEducation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startEducationActivity();
-            }
-        });
-        ic_action_call.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                CurriculumVitaeAppUtils.askUserToCall();
-            }
-        });
-        ic_action_email.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                CurriculumVitaeAppUtils.askUserToSendEmail();
-            }
-        });
-    }
-
-    private void initElements() {
-        ic_action_call = (ImageView) findViewById(R.id.ic_action_call);
-        ic_action_email = (ImageView) findViewById(R.id.ic_action_email);
-        buttonPersonalInfo = (TextView) findViewById(R.id.button_show_personal_info);
-        buttonExperience = (TextView) findViewById(R.id.button_show_professional_experience);
-        buttonEducation = (TextView) findViewById(R.id.button_show_education);
+            mainFragment = new MainFragment();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.add(R.id.fragment_container, mainFragment, TAG_MAIN);
+            fragmentTransaction.commit();
+        }
     }
 
     @Override
@@ -79,18 +49,8 @@ public class MainActivity extends Activity {
         CurriculumVitaeAppUtils.askUserToExit();
     }
 
-    private void startEducationActivity() {
-        Intent intent = new Intent(mContext, EducationActivity.class);
-        startActivity(intent);
-    }
+    @Override
+    public void onFragmentInteraction(Uri uri) {
 
-    private void startExperienceActivity() {
-        Intent intent = new Intent(mContext, ExperienceActivity.class);
-        startActivity(intent);
-    }
-
-    private void startPersonalInformationActivity() {
-        Intent intent = new Intent(mContext, PersonalInformationActivity.class);
-        startActivity(intent);
     }
 }
