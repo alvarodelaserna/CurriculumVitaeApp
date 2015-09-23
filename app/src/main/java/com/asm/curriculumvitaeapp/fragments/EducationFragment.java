@@ -47,6 +47,8 @@ public class EducationFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_education, container, false);
         TextView master_url = (TextView) view.findViewById(R.id.master_url);
         master_url.setMovementMethod(LinkMovementMethod.getInstance());
+        TextView bachelor_url = (TextView) view.findViewById(R.id.bachelor_url);
+        bachelor_url.setMovementMethod(LinkMovementMethod.getInstance());
         return view;
     }
 
