@@ -24,7 +24,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/my_name"
-                style="@android:style/TextAppearance.Medium"
+                style="@android:style/TextAppearance.Large"
+                android:textSize="@dimen/text_size"
                 android:gravity="center"
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.7"/>
@@ -43,7 +44,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/my_email_address"
-                style="@android:style/TextAppearance.Medium"
+                style="@android:style/TextAppearance.Large"
+                android:textSize="@dimen/text_size"
                 android:gravity="center"
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.7"/>
@@ -63,7 +65,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/my_phone_number"
-                style="@android:style/TextAppearance.Medium"
+                style="@android:style/TextAppearance.Large"
+                android:textSize="@dimen/text_size"
                 android:gravity="center"
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.7"/>
@@ -83,7 +86,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/my_address"
-                style="@android:style/TextAppearance.Medium"
+                style="@android:style/TextAppearance.Large"
+                android:textSize="@dimen/text_size"
                 android:gravity="center"
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.7"/>
@@ -102,7 +106,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/DNI"
-                style="@android:style/TextAppearance.Medium"
+                style="@android:style/TextAppearance.Large"
+                android:textSize="@dimen/text_size"
                 android:gravity="center"
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.7"/>
@@ -121,7 +126,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/birth_day"
-                style="@android:style/TextAppearance.Medium"
+                style="@android:style/TextAppearance.Large"
+                android:textSize="@dimen/text_size"
                 android:gravity="center"
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.7"/>
@@ -141,7 +147,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/b"
-                style="@android:style/TextAppearance.Medium"
+                style="@android:style/TextAppearance.Large"
+                android:textSize="@dimen/text_size"
                 android:gravity="center"
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.7"/>

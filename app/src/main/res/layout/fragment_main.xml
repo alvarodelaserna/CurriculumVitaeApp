@@ -26,7 +26,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/my_name"
                 android:gravity="center"
-                style="@android:style/TextAppearance.Large"/>
+                style="@android:style/TextAppearance.Large"
+                android:textSize="@dimen/text_size"/>
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
