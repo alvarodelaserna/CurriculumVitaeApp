@@ -4,10 +4,13 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
+import android.widget.TextView;
 
 import com.asm.curriculumvitaeapp.R;
 import com.asm.curriculumvitaeapp.adapters.ExpandableListAdapter;
@@ -42,12 +45,8 @@ public class EducationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_education, container, false);
-        expandableListView = (ExpandableListView) view.findViewById(R.id.expandable_list_view);
-        prepareListData();
-
-        expandableListAdapter = new ExpandableListAdapter(CurriculumVitaeApp.getContext(), listDataHeader, listDataChild);
-        expandableListView.setAdapter(expandableListAdapter);
-
+        TextView master_url = (TextView) view.findViewById(R.id.master_url);
+        master_url.setMovementMethod(LinkMovementMethod.getInstance());
         return view;
     }
 

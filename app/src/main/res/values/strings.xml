@@ -44,4 +44,14 @@
     <string name="linkedin_url">https://es.linkedin.com/pub/alvaro-de-la-serna-martinez/67/b50/445</string>
     <string name="open_with">Open with:</string>
     <string name="my_address">C/ Juan Álvarez Mendizábal 46, 28008 Madrid, Spain</string>
+    <string name="masters_multimedia">Master\'s degree in Multimedia and Communications</string>
+    <string name="master_multimedia_date">September 2014 - June 2015</string>
+    <string name="master_multimedia_data_science">Data Science</string>
+    <string name="master_multimedia_url"><a href="http://www.uc3m.es/ss/Satellite/Postgrado/en/Detalle/Estudio_C/1413461930221/1371208956904/Master_s_Degreee_in_Multimedia_y_Communications">Click here to see the program</a></string>
+    <string name="bachelor_audiovisual_systems_url"><a href="http://www.uc3m.es/ss/Satellite/Grado/en/Detalle/Estudio_C/1428666683091/1371212987094/Bachelor_s_Degree_in_Audiovisual_System_Engineering">Click here to see the program</a></string>
+    <string name="master_multimedia_machine_learning">Applications of machine learning techniques to multimedia data</string>
+    <string name="master_multimedia_tools">Tools:</string>
+    <string name="bachelors_degree">Bachelor\'s Degree in Audiovisual Systems Engineering</string>
+    <string name="bachelors_date">September 2010 - June 2014</string>
+    <string name="bachelor_telecommunications_engineering">Telecommunications engineering</string>
 </resources>
