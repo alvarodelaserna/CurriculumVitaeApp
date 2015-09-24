@@ -83,16 +83,12 @@ public class ExperienceFragment extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-    private static JobFragment createJobFragment(String companyName, String jobDuration,
-                                                 String jobDescription, String jobSkills){
-        return JobFragment.newInstance(companyName, jobDuration, jobDescription, jobSkills);
+    private static JobFragment createJobFragment(String companyName){
+        return JobFragment.newInstance(companyName);
     }
 
     private void switchToTapapFragment(){
-        JobFragment jfTapap = createJobFragment("Tapap", "February 2015 - present", "Lead Android " +
-                "Developer. I am in charge of making ideas come to life and bridging the gap between" +
-                " Production, Design and Programming departments.", "Tools:\n"+"- Android Studio\n" +
-                "- Java\n- REST\n- JSON\n- SQLite");
+        JobFragment jfTapap = createJobFragment("Tapap");
         FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
         fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left,
                 R.anim.enter_from_left, R.anim.exit_to_right);
@@ -102,10 +98,7 @@ public class ExperienceFragment extends Fragment {
     }
 
     private void switchToProgressiveBlueFragment(){
-        JobFragment jfProgressiveBlue = createJobFragment("Progressive Blue Technology", "November " +
-                "2014 - February 2015", "I was in charge of developing different types of Android" +
-                " applications depending on our clients' needs, working with Eclipse.", "Tools:\n" +
-                "- Eclipse\n- Java\n- REST\n- JSON\n- SQLite\n- PHP");
+        JobFragment jfProgressiveBlue = createJobFragment("Progressive Blue Technology");
         FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
         fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left,
                 R.anim.enter_from_left, R.anim.exit_to_right);
@@ -115,12 +108,7 @@ public class ExperienceFragment extends Fragment {
     }
 
     private void switchToTechnositeFragment(){
-        JobFragment jfTechnosite = createJobFragment("Fundosa Technosite", "June 2014 - August 2014",
-                "I participated in the design and development of a contextual help system working " +
-                        "with OpenCV on Google Glass, as wellas a Gateway for the management of " +
-                        "safety devices and environments for telecare using Raspberry Pi and NodeJS.",
-                "Tools:\n " + "- Eclipse\n- Java\n- REST\n- JSON\n- OpenCV\n- Google Glass\n" +
-                        "- RaspberryPi\n- NodeJS\n- Matlab\n- Bluetooth LTE");
+        JobFragment jfTechnosite = createJobFragment("Fundosa Technosite");
         FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
         fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left,
                 R.anim.enter_from_left, R.anim.exit_to_right);

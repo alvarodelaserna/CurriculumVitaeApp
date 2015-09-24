@@ -21,22 +21,22 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="1">
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/logo_uc3m"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="0.3"/>
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:text="@string/masters_multimedia"
-                        android:layout_gravity="center_vertical"
-                        android:gravity="center"
-                        style="@android:style/TextAppearance.Large"
-                        android:textSize="@dimen/text_size"
-                        android:textStyle="bold"
-                        android:layout_weight="0.7" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo_uc3m"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.3"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/masters_multimedia"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    style="@android:style/TextAppearance.Large"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    android:layout_weight="0.7" />
             </LinearLayout>
             <TextView
                 android:id="@+id/master_url"
@@ -87,12 +87,17 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/icon_python"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.33"/>
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/icon_matlab"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.33"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_machine_learning"
+                    android:layout_weight="0.33"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -220,6 +225,18 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/icon_latex"
+                    android:layout_weight="0.33"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:weightSum="1">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_json"
                     android:layout_weight="0.33"/>
             </LinearLayout>
         </LinearLayout>

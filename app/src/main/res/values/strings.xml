@@ -54,4 +54,10 @@
     <string name="bachelors_degree">Bachelor\'s Degree in Audiovisual Systems Engineering</string>
     <string name="bachelors_date">September 2010 - June 2014</string>
     <string name="bachelor_telecommunications_engineering">Telecommunications engineering</string>
+    <string name="tapap_date">February 2015 - present</string>
+    <string name="tapap_what_i_did">Lead Android Developer. I am in charge of making ideas come to life and bridging the gap between Production, Design and Programming departments.</string>
+    <string name="progressive_date">November 2014 - February 2015</string>
+    <string name="progressive_blue_wat_i_did">I was in charge of developing different types of Android applications depending on our clients\' needs, working with Eclipse.</string>
+    <string name="technosite_date">June 2014 - August 2014</string>
+    <string name="technosite_what_i_did">I participated in the design and development of a contextual help system working with OpenCV on Google Glass, as wellas a Gateway for the management of safety devices and environments for telecare using Raspberry Pi and NodeJS.</string>
 </resources>
