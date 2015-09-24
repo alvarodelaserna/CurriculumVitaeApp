@@ -7,29 +7,29 @@
 
     <ImageButton
         android:id="@+id/logo_tapap"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:src="@drawable/button_tapap"
         android:background="@android:color/transparent"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="1"/>
+        android:layout_weight="0.33"/>
 
     <ImageButton
         android:id="@+id/logo_progressive"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:src="@drawable/button_progressive"
         android:background="@android:color/transparent"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="1"/>
+        android:layout_weight="0.33"/>
 
     <ImageButton
         android:id="@+id/logo_technosite"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:src="@drawable/button_technosite"
         android:background="@android:color/transparent"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="1"/>
+        android:layout_weight="0.33"/>
 
 </LinearLayout>
