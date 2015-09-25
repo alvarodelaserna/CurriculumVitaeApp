@@ -13,7 +13,7 @@
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="1">
             <LinearLayout
@@ -27,13 +27,13 @@
                     android:layout_height="0dp"
                     android:src="@drawable/icon_spanish"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.6"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:src="@drawable/stars_five"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.4"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -46,13 +46,13 @@
                     android:layout_height="0dp"
                     android:src="@drawable/icon_english"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.6"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:src="@drawable/stars_five"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.4"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -72,13 +72,13 @@
                     android:layout_height="0dp"
                     android:src="@drawable/icon_french"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.6"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:src="@drawable/stars_three"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.4"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -91,13 +91,13 @@
                     android:layout_height="0dp"
                     android:src="@drawable/icon_android"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.6"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:src="@drawable/stars_five"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.4"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -117,13 +117,13 @@
                     android:layout_height="0dp"
                     android:src="@drawable/icon_python"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.6"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:src="@drawable/stars_five"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.4"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -136,13 +136,13 @@
                     android:layout_height="0dp"
                     android:src="@drawable/icon_java"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.6"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:src="@drawable/stars_five"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.4"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -162,13 +162,13 @@
                     android:layout_height="0dp"
                     android:src="@drawable/icon_html"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.6"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:src="@drawable/stars_five"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.4"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -181,13 +181,13 @@
                     android:layout_height="0dp"
                     android:src="@drawable/icon_matlab"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.6"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:src="@drawable/stars_five"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.4"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -208,13 +208,13 @@
                     android:layout_height="0dp"
                     android:src="@drawable/icon_latex"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.6"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:src="@drawable/stars_five"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.4"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -227,13 +227,13 @@
                     android:layout_height="0dp"
                     android:src="@drawable/icon_json"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.6"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:src="@drawable/stars_five"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.4"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -253,13 +253,13 @@
                     android:layout_height="0dp"
                     android:src="@drawable/icon_javascript"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.6"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:src="@drawable/stars_five"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.4"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -272,13 +272,13 @@
                     android:layout_height="0dp"
                     android:src="@drawable/icon_ios"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.6"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:src="@drawable/stars_three"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.4"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -298,13 +298,13 @@
                     android:layout_height="0dp"
                     android:src="@drawable/icon_machine_learning"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.6"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:src="@drawable/stars_four"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.4"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -317,13 +317,13 @@
                     android:layout_height="0dp"
                     android:src="@drawable/icon_sql"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.6"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:src="@drawable/stars_four"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.4"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -343,13 +343,13 @@
                     android:layout_height="0dp"
                     android:src="@drawable/icon_sqlite"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.6"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:src="@drawable/stars_four"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.4"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -362,13 +362,13 @@
                     android:layout_height="0dp"
                     android:src="@drawable/icon_node"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.6"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:src="@drawable/stars_three"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.4"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -388,13 +388,13 @@
                     android:layout_height="0dp"
                     android:src="@drawable/icon_opencv"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.6"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:src="@drawable/stars_four"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.4"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -407,13 +407,13 @@
                     android:layout_height="0dp"
                     android:src="@drawable/icon_bash"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.6"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:src="@drawable/stars_four"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.4"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
